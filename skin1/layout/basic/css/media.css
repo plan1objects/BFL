@@ -1,0 +1,499 @@
+@media screen and (max-width : 1536px){
+    body{
+       min-width: auto; 
+    }
+    #agreePopup{
+        width: 100%;
+    } 
+    #event_banner{
+        width: 90%;
+        margin: 2rem auto;
+    }
+    #header .inner,
+    #footer .utillMenuBox .inner,
+    #footer .addressBox.inner,
+    #recommended-tab,
+    #newProduct,
+    #refurbish,
+    #boardArea{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .quickMenu{
+        right: 24px;
+    }
+    #header .xans-layout-category .position > ul > li > a.more{
+        width: 90%;
+    }
+    #recommended-tab .tab_box ul.grid2 li:first-child .description{
+        bottom: 0;
+    }
+    #event_banner .swiper-slide a{
+        display: block;
+    }
+    #event_banner .swiper-slide a img{
+        display: block;
+        width: 100%;
+    }
+}
+@media screen and (max-width : 1280px){
+    .quickMenu{
+        right: 9px;
+    }
+
+}
+@media screen and (max-width : 1024px){
+    #topBannerClose{
+        display: none;
+    }
+    #recommended-tab .tab_box ul.grid2 li:first-child .description_box .spec span{
+        color: #aaa !important;
+    }
+    #recommended-tab .tab_box ul.grid2 li .description_box .spec li:nth-child(2) .title + span{
+        color: #303032 !important;
+    }
+    #recommended-tab .tab_box ul.grid2 li .description_box .spec li:last-child .title + span{
+        top: auto;
+        color: #EB5A23 !important;
+    }
+    #refurbish .spec > li:first-child{
+        border-bottom: 0;
+    }
+    #refurbish .spec > li:nth-child(2) span, 
+    #refurbish .spec > li:last-child span{
+        margin-top: 10px;
+        display: block;
+    }
+    #refurbish .prdList .description .name a span{
+        margin: 10px 0;
+        display: block;
+    }
+    #refurbish .prdList{
+        justify-content: space-between;
+    }
+    #refurbish ul.grid2 > li {
+        margin-right: 40px;
+    }
+    #refurbish ul.grid2 > li:nth-child(2n){
+        margin-right: 0;
+    }
+    #refurbish ul.grid2 > li > div{
+        width: 100%;
+    }
+    #refurbish .layerDiscountPeriod .content p strong span{
+        margin: 0 0 10px;
+    }
+    #refurbish .spec > li:first-child span{
+        margin: 0;
+    }
+    #refurbish .layerDiscountPeriod .content p strong{
+        padding: 0 0 10px;
+        margin: 0 0 0 10px;
+    }
+    #refurbish .prdList .description{
+        padding: 0;
+    }
+    #refurbish .prdList .description .name{
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+    }
+    #refurbish .salePer{
+        display: none;
+    }
+    #refurbish .spec > li:nth-child(2),
+    #refurbish .spec > li:last-child{
+        margin: 0;
+    }
+    #recommended-tab .spec > li:nth-child(2) .title + span .salePer,
+    #newProduct .spec > li:nth-child(2) .title + span .salePer{
+        display: none;
+    }
+    #recommended-tab .spec > li:nth-child(2) .title + span{
+        color: #303032 !important;
+    }
+    #recommended-tab .tab_box .spec li:last-child span{
+        position: relative;
+        top: auto;
+        left: auto;
+        color: #EB5A23 !important;
+    }
+    .ec-base-product .spec li .title a{
+        background-color: #EB5A23;
+        color: #fff;
+    }
+    #newProduct .spec li:nth-child(2) span{
+        margin-left: 0;
+    }
+    #header .g_nav_list{
+        display: none;
+    }   
+    #search_popup{
+        width: 90%;
+    }
+    #m_g_nav{
+        display: block;
+    }
+    #event_banner{
+        width: 100%;
+    }
+    .ec-base-product .prdList{
+        min-width: auto;
+    }
+    #recommended-tab .prdList{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        min-width: auto;
+    }
+    #recommended-tab .tab_box ul.grid2 > li{
+        float: none;
+        margin-left: 0;
+    }
+    #recommended-tab .tab_box ul.grid2 > li:last-child{
+        display: none;
+    }
+    #recommended-tab .tab_box ul.grid2 > li:nth-child(2n){
+        margin-right: 0;
+    }
+    #recommended-tab .tab_box ul.grid2 > li:first-child,
+    #recommended-tab .tab_box ul.grid2 > li{
+        width: calc(50% - 10px);
+        max-height: none;
+    }
+    #recommended-tab .tab_box ul.grid2 li .description{
+        padding: 20px 0;
+        margin: 0;
+    }
+    #recommended-tab .tab_box ul.grid2 li .description_box{
+        padding: 0;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+    #recommended-tab .tab_box ul.grid2 li .description_box span{
+        color: #303032 !important;
+    }
+    #recommended-tab .tab_box ul.grid2 li:first-child .description{
+        position: relative;
+        background: none;
+        padding: 20px 0;
+        margin: 0;
+    }
+    .ec-base-product .prdList .description .name a{
+        text-decoration: none;
+    }
+    #recommended-tab .tab_box ul.grid2 > li:nth-child(4), 
+    #recommended-tab .tab_box ul.grid2 > li:nth-child(5){
+        margin-top: 0;
+    }
+    #recommended-tab .tab_box{
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    #recommended-tab > ul{
+        display: block;
+    }
+    #recommended-tab > ul > li label{
+        border: 0;
+        font-size: 18px;
+    }
+    #recommended-tab > ul > li input:checked + label{
+        border: 0;
+        font-weight: 400;
+    }
+    #recommended-tab > ul > li input:checked ~ .tab_box{
+        z-index: auto;
+    }
+    #recommended-tab > ul > li{
+        width: 100%;
+    }
+    #newProduct ul.grid2 > li{
+        width: calc(50% - 10px);
+        margin-right: 20px;
+        padding-top: 20px;
+    }
+    #newProduct ul.grid2 > li:nth-child(2n){
+        margin-right: 0;
+    }
+    #refurbish ul.grid2 > li{
+        width: calc(50% - 10px) !important;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    .ec-base-product .title h2{
+        font-size: 18px;
+    }
+    .ec-base-product .title{
+        margin: 30px 0;
+    }
+    #p_banner .ab_text_box.number01{
+        right: 1rem;
+        bottom: 1rem;
+    }
+    #p_banner .ab_text_box.number02{
+        top: 1rem;
+        right: 1rem;
+    }
+    #p_banner .ab_text_box.number03{
+        left: 1rem;
+        top: 4rem;
+    }
+    #p_banner .ab_text_box.number04{
+        top: 1rem;
+        right: 1rem;
+    }
+    #p_banner .ab_text_box.number05{
+        left: 1rem;
+        bottom: 1rem;
+        top: auto;
+    }
+    #p_banner .ab_text_box h2{
+        font-size: 26px;
+    }
+    #p_banner .ab_text_box h3{
+        font-size: 16px;
+    }
+    #eventBoard #titleArea h2{
+        font-size: 18px;
+        margin: 30px 0;
+    }
+    #refurbish .swiper-pagination-fraction{
+        bottom: 30px;
+    }
+    #refurbish .swiper-button-prev, 
+    #refurbish .swiper-button-next{
+        bottom: 34px;
+    }
+
+}
+@media screen and (max-width : 920px){
+}
+@media screen and (max-width : 768px){
+    #event_banner .swiper-pagination{
+        display: none;
+    }
+    #agreePopup .dateNotShow_box{
+        right: 2px;
+    }
+    #dateNotShow{
+        font-size: 14px;
+    }
+    #header .df-bannermanager > div > a{
+        font-size: 14px;
+    }
+    .quickMenu{
+        right: 0;
+    }
+    #contents{
+        max-width: none;
+    }
+    #m_g_nav .m_g_nav_box{
+        width: 40%;
+    }
+    #newProduct .spec > li:last-child{
+        margin-bottom:20px;
+    }
+
+}
+@media screen and (max-width : 580px){
+
+    #refurbish ul.grid2 > li{
+        width: calc(50% - 10px) !important;
+        margin-right: 20px;
+    }
+    #header #m_g_nav .xans-layout-category .position ul{
+        padding: 5px;
+    }
+    .ec-base-product ul.grid2 li .description{
+        width: auto;
+    }
+    #eventBoard .thumbType > li{
+        width: calc(50% - 10px);
+    }
+    #eventBoard .sale_icon{
+        width: 50px;
+        transform: translate(13px, -15px);
+    }
+    #eventBoard .sale_icon img{
+        width: 100%;
+    }
+    #eventBoard .summary .subject{
+        font-size: 14px;
+    }
+    #eventBoard .contentBoard{
+        font-size: 12px;
+    }
+    #agreePopup{
+        position: relative;
+    }
+    
+    #header .df-bannermanager > div > a{
+        font-size: 12px;
+    }
+    #dateNotShow,
+    #topBannerClose span{
+        font-size: 12px;
+    }
+    #footer .utilMenu{
+        width: 95%;
+    }
+    #footer .utilMenu li a, 
+    #footer .utilMenu li strong{
+        line-height: 30px;
+        font-size: 12px;
+    }
+    #footer .xans-layout-footer .hosting{
+        position: relative;
+        top: auto;
+        margin: 22px 0 0;
+    }
+    #footer .xans-layout-footer .address span{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    #footer .xans-layout-footer .address{
+        padding: 20px 0 15px;
+    }
+    #footer .xans-layout-footer .copyright{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    #dateNotShow{
+        display: none;
+    }
+    #recommended-tab .tab_box .spec li:first-child span, 
+    #newProduct .spec > :first-child .title + span,
+    .ec-base-product .prdList .description .name a span,
+    #refurbish .spec > li:nth-child(2) span{
+        display: block;
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .ec-base-product .spec > li{
+        width: 120px;
+    }
+    #newProduct .spec li:nth-child(2) span,
+    #recommended-tab .tab_box .spec li:last-child span{
+        display: inline-block;
+        font-size: 14px !important;
+    }
+    #refurbish .salePer{
+        font-size: 46px;
+    }
+    #refurbish .spec > li:nth-child(2) .salePer span{
+        display: inline-block;
+    }
+    #refurbish .layerDiscountPeriod .content p strong,
+    #refurbish .layerDiscountPeriod .content p strong span{
+        font-size: 16px;
+    }
+    .ec-base-product .prdList .thumbnail .button{
+        width: 30px;
+    }
+    #search_popup .searchKeyword .searchKeyword_ul a{
+        text-indent: 1rem;
+    }
+    #header .xans-layout-category .position > ul > li > a{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width : 425px){
+    #m_g_nav .m_g_nav_box{
+        top: 139.41px;
+    }
+    #header .xans-layout-logotop img{
+        width: 160px;
+    }
+    #recommended-tab .tab_box .spec li:first-child span,
+    #newProduct .spec > :first-child .title + span{
+        font-size: 13px !important;
+    }
+    .ec-base-product .prdList .description .name a span{
+        font-size: 13px !important;
+    }
+    #p_banner .ab_text_box h2{
+        font-size: 20px;
+    }
+    #p_banner .ab_text_box h3{
+        font-size: 12px;
+    }
+    #p_banner .swiper-pagination{
+        bottom: 5px;
+    }
+    #event_banner{
+        margin: 1rem auto;
+    }
+    #recommended-tab .tab_box{
+        padding-top: 0;
+    }
+    #newProduct ul.grid2 > li{
+        padding-top: 0;
+    }
+    #newProduct .spec > li:last-child{
+        margin-bottom: 14px;
+    }
+    #refurbish .salePer{
+        top: 20px;
+        left: 10px;
+    }
+    #refurbish .prdList .description{
+        padding: 0 10px;
+    }
+    #refurbish .spec > li:last-child{
+        margin-top: 0;
+    }
+    #refurbish .spec > li:nth-child(2) span{
+        font-size: 13px !important;
+    }
+    #refurbish .spec > li:nth-child(2) .salePer span{
+        font-size: 20px !important;
+    }
+    #m_g_nav .m_g_nav_box{
+        width: 60%;
+    }
+    #p_banner .ab_text_box.number03{
+        top: 2rem;
+    }
+}
+@media screen and (max-width : 375px){
+    #recommended-tab .tab_box .spec li:first-child span, 
+    #newProduct .spec > :first-child .title + span{
+        font-size: 12px !important;
+    }
+    #refurbish .spec > li:first-child{
+        border-bottom: 0;
+    }
+    #search_popup .searchKeyword .searchKeyword_ul a,
+    #search_popup .xans-layout-searchheader #keyword{
+        font-size: 12px;
+    }
+    #eventBoard .summary .subject,
+    #eventBoard .contentBoard{
+        display: block;
+        width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
+@media screen and (max-width : 375px){
+
+    #footer .utillMenuBox .inner{
+        flex-direction: column;
+
+    }
+    #footer .utillMenuBox .inner li{
+        border-bottom: solid 1px #fff;
+    }
+    #footer .utillMenuBox .inner li:last-child{
+        border-bottom: 0;
+    }
+
+}
+    

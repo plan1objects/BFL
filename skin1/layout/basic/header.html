@@ -1,0 +1,405 @@
+<div id="header">
+    <div id="agreePopup" class="swiper mySwiper home-popup">
+        <div class="swiper-wrapper agree-popup-inner">
+            <div class="swiper-slide ">
+                <div df-banner-code="top-banner" hidden>
+                    <div df-banner-clone>
+                        <a href="{#href}" target="{#target}">{#title}</a>
+                    </div>          
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div df-banner-code="top-banner2" hidden>
+                    <div df-banner-clone>
+                        <a href="{#href}" target="{#target}">{#title}</a>
+                    </div>          
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div df-banner-code="top-banner3" hidden>
+                    <div df-banner-clone>
+                        <a href="{#href}" target="{#target}">{#title}</a>
+                    </div>          
+                </div>
+            </div> 
+        </div>
+        <div class="dateNotShow_box">
+            <a id="dateNotShow" href="javascript:todayClose('agreePopup', 1);" class="today-x-btn">오늘 하루 보지 않기</a>
+            <a id="topBannerClose" href="javascript:fadeOutPop();" class="x-btn"><span class="x-btn xi-close-thin"></span></a>
+        </div>
+    </div>
+    <script>
+        // * today popup close
+        todayOpen('agreePopup');
+        // 창열기  
+        function todayOpen(winName) {
+            var blnCookie = getCookie(winName);
+            var obj = eval("window." + winName);
+            console.log(blnCookie);
+            if (!blnCookie) {
+            obj.style.display = "block";
+            } else {
+            obj.style.display = "none";
+            }
+        }
+        // 창닫기  
+        function todayClose(winName, expiredays) {
+            setCookie(winName, "expire", expiredays);
+            var obj = eval("window." + winName);
+            obj.style.display = "none";
+        }
+        // 쿠키 가져오기  
+        function getCookie(name) {
+            var nameOfCookie = name + "=";
+            var x = 0;
+            while (x <= document.cookie.length) {
+            var y = (x + nameOfCookie.length);
+            if (document.cookie.substring(x, y) == nameOfCookie) {
+                if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                endOfCookie = document.cookie.length;
+                return unescape(document.cookie.substring(y, endOfCookie));
+            }
+            x = document.cookie.indexOf(" ", x) + 1;
+            if (x == 0)
+                break;
+            }
+            return "";
+        }
+
+        // 24시간 기준 쿠키 설정하기  
+        // 만료 후 클릭한 시간까지 쿠키 설정  
+        function setCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+
+        function fadeOutPop(){
+           document.querySelector('#agreePopup').style.display = 'none'; 
+        }
+    </script>
+    <h1 id="mainLogo" module="Layout_LogoTop">
+        <!--@css(/css/module/layout/logotop.css)-->
+        <!-- <a href="/index.html">{$mall_name}</a> -->
+        <span>
+            <a href="/index.html"><img src="/img/logo.png" alt="메인로고"></a>
+        </span>    
+    </h1>
+    <div class="nav_position">     
+        <div class="g_navi">
+            <div class="inner">
+                <ul class="g_nav_list">
+                    <li><a href="/category/리퍼특가/24/">Refurbish Sale</a></li>
+                    <li id="shopNav"><a href="#">Shop</a></li>
+                    <li><a href="/board/free/list.html?board_no=1">Notice</a></li>
+                    <li><a href="/board/product/list.html?board_no=6">QnA</a></li>
+                    <li><a href="/board/free/list.html?board_no=5">How to</a></li>
+                </ul>
+                <div id="m_g_nav">
+                    <input type="checkbox" id="nav_check"><label for="nav_check">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="m_g_nav_box">
+                        <ul class="m_g_nav_list">
+                            <li><a href="/category/리퍼특가/24/">Refurbish Sale</a></li>
+                            <li id="m_shopNav"><a href="#">Shop</a>
+                                <div module="Layout_category">
+                                    <!--@css(/css/module/layout/category.css)-->
+                                    <!--@js(/js/module/layout/category.js)-->
+                                    <div class="position">
+                                        <ul>
+                                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="/board/free/list.html?board_no=1">Notice</a></li>
+                            <li><a href="/board/product/list.html?board_no=6">QnA</a></li>
+                            <li><a href="/board/free/list.html?board_no=5">How to</a></li>
+                            <li><a href="/board/gallery/read.html?no=16&board_no=8">Event</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div module="Layout_statelogoff">
+                    <!--@css(/css/module/layout/statelogoff.css)-->
+                    <a href="#" class="searchPopupOpen"><img src="/img/new_sch_icon_b.png" alt="검색"></i></a>
+                    <!-- <a href="/member/login.html" class="log"><i class="xi-lock-o"></i></a> -->
+                    <!-- <a href="/member/join.html"><i class="xi-user-plus-o"></i></a> -->
+                    <a href="/order/basket.html"><img src="/img/new_cart_icon.png" alt="장바구니"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+                    <!-- <a href="/myshop/order/list.html">주문조회</a> -->
+                    <a href="/myshop/index.html"><img src="/img/new_mp_icon.png" alt="마이페이지"></a>
+                    <!-- <a class="{$board_display|display}" href="/board/index.html">게시판</a> -->
+                </div>
+                <div module="Layout_stateLogon">
+                    <!--@css(/css/module/layout/statelogon.css)-->
+                    <!-- <span class="myinfo"><strong>{$name}</strong>님 환영합니다.  <a href="/member/modify.html">회원정보수정</a></span>  -->
+                    <a href="#" class="searchPopupOpen"><img src="/img/new_sch_icon_b.png" alt="검색"></i></a>
+                    <a href="{$action_logout}" class="log"><i class="xi-unlock-o"></i></a>
+                    <a href="/order/basket.html"><img src="/img/new_cart_icon.png" alt="장바구니"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+                    <!-- <a href="/myshop/order/list.html">주문조회</a> -->
+                    <a href="/myshop/index.html"><img src="/img/new_mp_icon.png" alt="마이페이지"></a>
+                    <!-- <a class="{$board_display|display}" href="/board/index.html">게시판</a> -->
+                </div>
+                <div id="search_popup">
+                    <button type="button" class="closeBtn"><img src="/img/sch_pop_close.png" alt="닫기"></button>
+                    <div module="Layout_SearchHeader" class="searchBox" id="{$search_box_id}">
+                        <!--@css(/css/module/layout/searchHeader.css)-->
+                        <!--
+                            $category_page=/product/list.html
+                        -->
+                        <fieldset>
+                            <legend>검색</legend>
+                            <div class="searchForm ePlaceholder" title="검색어를 입력 해 주세요.">
+                                {$form.keyword}<input type="image" src="/img/new_sch_icon.png" alt="검색" onclick="{$action_search_submit}" />
+                                <!-- <button type="button" class="btnDelete">삭제</button> -->
+                            </div>
+                        </fieldset>
+                        <div class="tab">
+                            <ul class="searchTab {$hot_use_display|display}">
+                                <li class="selected"><a href="#none">인기 검색어</a></li>
+                                <li><a href="#none">최근 검색어</a></li>
+                            </ul>
+                        </div>
+                        <div class="searchKeyword">
+                            <div module="search_hotkeyword">
+                                <ul class="searchKeyword_ul">
+                                    <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+                                    <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+                                </ul>
+                            </div>
+                            <div module="search_recentkeyword">
+                                <!-- <p class="{$recent_none_display|display}">최근 검색어가 없습니다.</p> -->
+                                <ul class="{$recent_list_display} searchKeyword_ul">
+                                    <li><a href="#">카사 캐빈 텐트</a></li>
+                                    <li><a href="#">F1 원터치 가스토치</a></li>
+                                    <li data-index="{$recent_keyword_index}">
+                                        <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                                        <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+                                    </li>
+                                    <li data-index="{$recent_keyword_index}">
+                                        <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                                        <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+                                    </li>
+                                </ul>
+                                <div class="button">
+                                    <button type="button" class="btnDeleteAll" onclick="{$recent_keyword_remove_all}">검색기록 전체삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button type="button" class="btnClose" id="{$search_cancel_id}">닫기</button> -->
+                    </div>    
+                </div>
+                
+            </div>
+        </div>
+        <nav id="g_nav_box">
+            <div class="inner">
+                <div id="category" module="Layout_category">
+                    <!--@css(/css/module/layout/category.css)-->
+                    <!--@js(/js/module/layout/category.js)-->
+                    <div class="position">
+                        <ul>
+                            <li><a href="/board/free/list.html?board_no=5">Camping story</a></li>
+                            <li>
+                                <a href="/board/free/list.html?board_no=5">
+                                    <img src="/img/story.png" alt="캠핑 스토리">
+                                    <a class="more" href="/board/free/list.html?board_no=5">이야기 더보기</a>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/board/gallery/read.html?no=16&board_no=8">Event</a></li>
+                            <li>
+                                <a href="/board/gallery/read.html?no=16&board_no=8">
+                                    <img src="/img/event.png" alt="이벤트">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+    </div>
+   
+
+    <div class="inner">
+            <div class="p_utills">
+                <div class="p_search">
+                    <!-- <div id="g_nav" class="nav nav-pills">
+                        <div class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="xi-bars"></i></a>
+                          <div class="dropdown-menu">
+                            <div class="dropDown_flex">
+                                <ul>
+                                    <li class="dropDownNav">
+                                        <ul>
+                                            <h3>리퍼특가</h3>
+                                            <li>
+                                                <a href="/product/list.html?cate_no=24">리퍼특가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropDownNav">
+                                        <h3>타프/텐트/그늘막</h3>
+                                        <ul>
+                                            <li><a href="/product/list.html?cate_no=44">타프</a></li>
+                                            <li><a href="/product/list.html?cate_no=45">텐트</a></li>
+                                            <li><a href="/product/list.html?cate_no=46">그늘막</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropDownNav">
+                                        <h3>테이블/체어</h3>
+                                        <ul>
+                                            <li><a href="/product/list.html?cate_no=47">테이블</a></li>
+                                            <li><a href="/product/list.html?cate_no=48">체어</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="dropDownNav">
+                                        <h3>침낭/매트</h3>
+                                        <ul>
+                                            <li><a href="/product/list.html?cate_no=49">침낭</a></li>
+                                            <li><a href="/product/list.html?cate_no=50">매트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropDownNav">
+                                        <h3>화로대/취사/조리도구</h3>
+                                        <ul>
+                                            <li><a href="/product/list.html?cate_no=51">버너</a></li>
+                                            <li><a href="/product/list.html?cate_no=52">화로대</a></li>
+                                            <li><a href="/product/list.html?cate_no=53">기타</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropDownNav">
+                                        <ul>
+                                            <h3>캠핑소품</h3>
+                                            <li>
+                                                <a href="/product/list.html?cate_no=43">캠핑소품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="dropDownNav">
+                                        <h3>게시판</h3>
+                                        <ul>
+                                            <li><a href="/board/free/list.html?board_no=1">공지사항</a></li>
+                                            <li><a href="/board/product/list.html?board_no=6">Q&A</a></li>
+                                            <li><a href="/board/free/list.html?board_no=5">사용방법공유</a></li>
+                                            <li><a href="/shop1/front/php/b/board_list.php?board_no=4&is_pcver=T">사용후기</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div module="Layout_SearchHeader">
+                        <!--@css(/css/module/layout/searchHeader.css)-->
+                        <!--
+                            $product_page=/product/detail.html
+                            $category_page=/product/list.html
+                        -->
+                        <!--<fieldset>
+                            <legend>검색</legend>
+                            {$form.keyword}<input type="image" src="//img.echosting.cafe24.com/skin/base/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /><ul class="autoDrop" id="{$search_auto_id}"></ul></fieldset>
+                    </div>-->
+                </div> 
+                
+            </div>
+            
+            
+            
+            
+            
+        </div>
+    
+        <div module="Layout_multishopList" class="list">
+            <!--@css(/css/module/layout/multishopList.css)-->
+            <button type="button" class="toggle"><span>{$current_language}</span></button>
+            <ul module="Layout_multishopListitem">
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">                    
+                        <span class="name">{$locale_language}</span>
+                        <span class="unit">{$currency_code}</span>
+                    </a>
+                </li>
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <span class="name">{$locale_language}</span>
+                        <span class="unit">{$currency_code}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <div module="Layout_multishopList" class="thumb">
+            <!--@css(/css/module/layout/multishopList.css)-->        
+            <div module="Layout_multishopListmultioption" class="multiOption">
+                <a href="#none">
+                    <span module="Layout_multishopListmultioptionCountry" class="ship">
+                        <strong>Ship to</strong><span> : </span>
+                    </span>
+                    <span module="Layout_multishopListmultioptionLanguage" class="language">
+                        <strong>Language</strong><span> : {$language_name}</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    
+    
+        <!-- <ul class="special">
+            <li><a href="/product/list.html?cate_no=24">신상품</a></li>
+            <li><a href="/product/list.html?cate_no=25">프리미엄</a></li>
+            <li><a href="/product/list.html?cate_no=26">스페셜상품</a></li>
+        </ul> -->
+    
+        <!-- <ul module="Layout_shoppingInfo">
+            <!--@css(/css/module/layout/shoppingInfo.css)
+            <li class="{$use_mileage|display}"><a href="/myshop/mileage/historyList.html">{$mileage_name} <strong>{$mileage}</strong></a></li>
+            <li class="{$use_basket_cnt|display}"><a href="/order/basket.html">장바구니 <strong>{$basket_cnt}<span class="{$use_basket_price|display}">({$basket_price})</span></strong></a></li>
+            <li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품 <strong>{$interest_prd_cnt}</strong></a></li>
+            <li class="{$use_like_product_cnt|display}">{$like_prd_tag}</li>
+            <li class="{$use_coupon_cnt|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <strong>{$coupon_cnt}</strong></a></li>
+            <li class="{$use_deposit|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name} <strong>{$deposit}</strong></a></li>
+        </ul> -->
+    
+        <div class="link">
+            <a module="Layout_bookmark" href="/link/bookmark.html" target="_blank" onclick="winPop(this.href); return false;"><span>즐겨찾기</span></a>
+            <a module="Layout_shortcut" href="/link/shortcut.html" target="_blank" onclick="winPop(this.href); return false;">바로가기</a>
+        </div>
+    </div>
+</div>
